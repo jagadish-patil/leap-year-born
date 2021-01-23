@@ -8,7 +8,7 @@ console.log();
 
 console.log(chalk.green("Welcome " + username.toUpperCase()));
 
-console.log(chalk.yellow("\tLet us know, you were born on a leap year or not?\n"));
+console.log(chalk.yellow("\tLets see, whether you were born on a leap year or not?\n"));
 
 var yearOfBirth = prompt("What's your Year of Birth? ");
 
