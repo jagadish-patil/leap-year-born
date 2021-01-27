@@ -10,14 +10,19 @@ console.log(chalk.green("Welcome " + username.toUpperCase()));
 
 console.log(chalk.yellow("\tLets see, whether you were born on a leap year or not?\n"));
 
-var yearOfBirth = prompt("What's your Year of Birth? ");
+var dateOfBirth = prompt("What's your Year of Birth? (in DD/MM/YYYY format)\n");
 
 console.log();
-if(isNaN(yearOfBirth)){
-  console.log(chalk.bgCyan("Invalid Input!, you did not mention your Year of Birth"));
+
+var date = new Date(dateOfBirth);
+const isValidDate = !isNaN(date.getTime())
+
+if(!isValidDate){  
+  console.log(chalk.bgCyan("Invalid Input!, You did not mention your Date of Birth in a given format"));
 } 
-else{
-leapYear(yearOfBirth)
+else{  
+  var yearOfBirth = date.getFullYear();  
+  leapYear(yearOfBirth)
 }
 
 //processing
